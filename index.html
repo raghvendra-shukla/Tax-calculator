@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Income Calculator</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+  <h1 class="mt-4">Income Calculator</h1>
+
+  <form id="income-form">
+    <div class="mb-3">
+      <label for="gross_income" class="form-label">Gross Annual Income:</label>
+      <input type="text" class="form-control" id="gross_income" name="gross_income" placeholder="Enter gross annual income" required pattern="[0-9]+" title="Please enter numbers only">
+    </div>
+    <div class="mb-3">
+      <label for="extra_income" class="form-label">Extra Income:</label>
+      <input type="text" class="form-control" id="extra_income" name="extra_income" placeholder="Enter extra income from other sources" required pattern="[0-9]+" title="Please enter numbers only">
+    </div>
+    <div class="mb-3">
+      <label for="age_group" class="form-label">Age Group:</label>
+      <select class="form-select" id="age_group" name="age_group">
+        <option value="39">&lt;40</option>
+        <option value="45">40-60</option>
+        <option value="60">&ge;60</option>
+      </select>
+    </div>
+    <div class="mb-3">
+      <label for="deductions" class="form-label">Total Applicable Deductions:</label>
+      <input type="text" class="form-control" id="deductions" name="deductions" placeholder="Enter total applicable deductions" required pattern="[0-9]+" title="Please enter numbers only">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+  <div class="card mt-4" id="result-card" style="display: none;">
+    <div class="card-body">
+      <h5 class="card-title">Total Income</h5>
+      <p class="card-text" id="total-income-value"></p>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
